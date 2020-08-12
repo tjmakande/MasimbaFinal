@@ -18,9 +18,8 @@ app.listen(3000, () => {
     console.log('Your website has launched on localhost:3000 ')
 });
 
+conosle.log("hello world");
 
-
-console.log('Hello world');
 
 
 
