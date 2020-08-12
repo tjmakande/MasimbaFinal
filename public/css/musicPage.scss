@@ -1,0 +1,383 @@
+.musicPage {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: Black;
+    nav {
+        position: fixed;
+        height: 50px;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.653);
+        display: flex;
+        flex-direction: row;
+        z-index: 2;
+        .nav-wrapper {
+            height: 50px;
+            width: 100%;
+            max-width: 1100px;
+            display: flex;
+            flex-direction: row;
+            margin: auto;
+            .Logo {
+                width: 10%;
+                margin: auto;
+                text-align: center;
+                a {
+                    //color: #ffffff;
+                    color: rgb(158, 158, 158);
+                    font-style: normal;
+                    font-size: 30px;
+                    font-family: Alegreya;
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+            }
+            .tabs {
+                display: flex;
+                justify-content: space-evenly;
+                width: 60%;
+                padding: 0px 100px;
+                margin: auto;
+                position: relative;
+                font-family: Alegreya;
+                text-transform: uppercase;
+                .music-nav,
+                .home-nav,
+                .videos-nav,
+                .aboutMe-nav {
+                    letter-spacing: 2px;
+                    font-size: 20px;
+                    color: rgb(177, 177, 177);
+                    text-decoration: none;
+                    position: relative;
+                    display: inline-block;
+                    &:hover {
+                        cursor: pointer;
+                        color: rgb(116, 116, 116);
+                        transition: .5s;
+                    }
+                    &::after {
+                        content: '';
+                        height: 2px;
+                        width: 0px;
+                        background: #000000;
+                        position: absolute;
+                        top: 25px;
+                        bottom: 0px;
+                        left: 0px
+                    }
+                    &:hover::after {
+                        transition-duration: 0.5s;
+                        content: '';
+                        height: 2px;
+                        width: 100%;
+                        background: rgb(177, 177, 177);
+                        position: absolute;
+                        bottom: 0px;
+                        left: 0px
+                    }
+                }
+            }
+            .SM {
+                width: 20%;
+                margin: auto;
+                display: flex;
+                justify-content: space-evenly;
+                flex-direction: row-reverse;
+                float: right;
+                a {
+                    stroke: rgba(0, 0, 0, 1);
+                    svg {
+                        height: 30px;
+                        width: 25px;
+                         :hover {
+                            transition: .5s;
+                            fill: black;
+                            stroke: black;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .Content--Music {
+        width: 95%;
+        // max-height: 720px;
+        margin: 50px auto;
+        border-radius: 30px 30px;
+        display: flex;
+        flex-direction: column;
+        h1 {
+            position: fixed;
+            bottom: 0px;
+            font-size: 250px;
+            font-family: Alegreya;
+            letter-spacing: 5px;
+            color: rgba(90, 90, 90, 0.226);
+            text-align: left;
+            text-transform: uppercase;
+            margin: 5px;
+            z-index: 0;
+        }
+        .RecordContainer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            width: 100%;
+            max-width: 1100px;
+            margin: auto;
+            margin-bottom: 200px;
+            #record {
+                width: 300px;
+                height: 300px;
+                display: flex;
+                margin: 10px;
+                z-index: 0;
+                &:hover .overlay_coverImage {
+                    transform: scale(1);
+                }
+                .overlay_coverImage {
+                    position: relative;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    background-color: rgba(0, 0, 0, 0.9);
+                    overflow: hidden;
+                    width: 100%;
+                    height: 100%;
+                    transform: scale(0);
+                    transition: .3s ease;
+                    .text {
+                        color: white;
+                        font-size: 20px;
+                        font-family: Alegreya;
+                        position: absolute;
+                        top: 100px;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        text-align: center;
+                    }
+                    .stream-line-1 {
+                        position: absolute;
+                        color: white;
+                        top: 220px;
+                        left: 50%;
+                        transform: translate(-50%);
+                        width: 45%;
+                        margin: auto;
+                        display: flex;
+                        border: 2px solid rgb(202, 202, 202);
+                        border-radius: 2px;
+                    }
+                    .stream-line-2 {
+                        position: absolute;
+                        color: white;
+                        top: 85%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 45%;
+                        margin: 5px auto;
+                        display: flex;
+                        border: 2px solid rgb(202, 202, 202);
+                        border-radius: 2px;
+                    }
+                    .spotify-logo {
+                        position: absolute;
+                        color: white;
+                        top: 80%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 20%;
+                        margin: auto;
+                        display: flex;
+                        justify-content: space-evenly;
+                        flex-direction: row-reverse;
+                        float: right;
+                        svg {
+                            height: 30px;
+                            width: 25px;
+                        }
+                    }
+                    .soundcloud-logo {
+                        position: absolute;
+                        color: white;
+                        top: 80%;
+                        left: 65%;
+                        transform: translate(-50%, -50%);
+                        width: 20%;
+                        margin: auto;
+                        display: flex;
+                        justify-content: space-evenly;
+                        flex-direction: row-reverse;
+                        float: right;
+                        svg {
+                            height: 30px;
+                            width: 25px;
+                        }
+                    }
+                    .youtube-logo {
+                        position: absolute;
+                        color: white;
+                        top: 80%;
+                        left: 35%;
+                        transform: translate(-50%, -50%);
+                        width: 20%;
+                        margin: auto;
+                        display: flex;
+                        justify-content: space-evenly;
+                        flex-direction: row-reverse;
+                        float: right;
+                        svg {
+                            height: 30px;
+                            width: 25px;
+                        }
+                    }
+                }
+            }
+            .CoverImage-1 {
+                display: flex;
+                background-image: url('../Images/SUNRISE-COVER.jpg');
+                background-size: 100% 100%;
+                background-position: center;
+            }
+            .CoverImage-2 {
+                display: flex;
+                background-image: url('../Images/SUNSET-COVER.jpg');
+                background-size: 100% 100%;
+                background-position: center;
+            }
+            .CoverImage-3 {
+                display: flex;
+                background-image: url('../Images/MIDDAY-COVER.jpg');
+                background-size: 100% 100%;
+                background-position: center;
+            }
+            .CoverImage-4 {
+                display: flex;
+                background-image: url('../Images/MIDNIGHT-COVER.jpg');
+                background-size: 100% 100%;
+                background-position: center;
+            }
+            .CoverImage-5 {
+                display: flex;
+                background-image: url('../Images/MXM ALBUM ART.jpg');
+                background-size: 100% 100%;
+                background-position: center;
+            }
+            .CoverImage-6 {
+                display: flex;
+                background-image: url('../Images/PART 3 ALBUM ART.jpg');
+                background-size: 100% 100%;
+                background-position: center;
+            }
+            .CoverImage-7 {
+                display: flex;
+                background-image: url('../Images/Street Light.jpg');
+                background-size: 100% 100%;
+                background-position: center;
+            }
+            .CoverImage-8 {
+                display: flex;
+                background-image: url('../Images/4eva-cover.jpg');
+                background-size: 100% 100%;
+                background-position: center;
+            }
+        }
+    }
+}
+
+//---------MEDIA QUERIES START HERE--------------
+//media query between 1000 and 1200px
+// @media screen and (min-width:1025px) and (max-width:1200px) {
+//    body{
+//    }    
+// }
+// media query for 850-1024px
+@media screen and (min-width:850px) and (max-width:1024px) {
+    body {
+        .musicPage {
+            .Content--Music {
+                h1 {
+                    font-size: 170px;
+                }
+            }
+        }
+    }
+}
+
+//media query for 769-1024px
+@media screen and (min-width:769px) and (max-width:849px) {
+    body {
+        .musicPage {
+            nav {
+                .nav-wrapper {
+                    .Logo {
+                        width: 10%;
+                        margin: 0px 40px;
+                    }
+                    .tabs {
+                        display: none;
+                    }
+                    .SM {
+                        display: none;
+                    }
+                    .icon {
+                        position: absolute;
+                        width: 40px;
+                        right: 40px;
+                        padding: 0 8px;
+                        &:hover {
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+            .Content--Music {
+                h1 {
+                    font-size: 170px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    body {
+        .musicPage {
+            nav {
+                .nav-wrapper {
+                    .Logo {
+                        width: 10%;
+                        margin: 5px 20px;
+                    }
+                    .tabs {
+                        display: none;
+                    }
+                    .SM {
+                        display: none;
+                    }
+                    .icon {
+                        position: absolute;
+                        width: 40px;
+                        right: 20px;
+                        padding: 0 8px;
+                        &:hover {
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+            .Content--Music {
+                align-items: center;
+                .RecordContainer {
+                    margin-bottom: 100px;
+                }
+                h1 {
+                    font-size: 100px;
+                }
+            }
+        }
+    }
+}

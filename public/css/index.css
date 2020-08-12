@@ -1,0 +1,1714 @@
+.musicPage {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: Black;
+}
+.musicPage nav {
+  position: fixed;
+  height: 50px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.653);
+  display: flex;
+  flex-direction: row;
+  z-index: 2;
+}
+.musicPage nav .nav-wrapper {
+  height: 50px;
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+}
+.musicPage nav .nav-wrapper .Logo {
+  width: 10%;
+  margin: auto;
+  text-align: center;
+}
+.musicPage nav .nav-wrapper .Logo a {
+  color: #9e9e9e;
+  font-style: normal;
+  font-size: 30px;
+  font-family: Alegreya;
+}
+.musicPage nav .nav-wrapper .Logo a:hover {
+  cursor: pointer;
+}
+.musicPage nav .nav-wrapper .tabs {
+  display: flex;
+  justify-content: space-evenly;
+  width: 60%;
+  padding: 0px 100px;
+  margin: auto;
+  position: relative;
+  font-family: Alegreya;
+  text-transform: uppercase;
+}
+.musicPage nav .nav-wrapper .tabs .music-nav,
+.musicPage nav .nav-wrapper .tabs .home-nav,
+.musicPage nav .nav-wrapper .tabs .videos-nav,
+.musicPage nav .nav-wrapper .tabs .aboutMe-nav {
+  letter-spacing: 2px;
+  font-size: 20px;
+  color: #b1b1b1;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+}
+.musicPage nav .nav-wrapper .tabs .music-nav:hover,
+.musicPage nav .nav-wrapper .tabs .home-nav:hover,
+.musicPage nav .nav-wrapper .tabs .videos-nav:hover,
+.musicPage nav .nav-wrapper .tabs .aboutMe-nav:hover {
+  cursor: pointer;
+  color: #747474;
+  transition: 0.5s;
+}
+.musicPage nav .nav-wrapper .tabs .music-nav::after,
+.musicPage nav .nav-wrapper .tabs .home-nav::after,
+.musicPage nav .nav-wrapper .tabs .videos-nav::after,
+.musicPage nav .nav-wrapper .tabs .aboutMe-nav::after {
+  content: "";
+  height: 2px;
+  width: 0px;
+  background: #000000;
+  position: absolute;
+  top: 25px;
+  bottom: 0px;
+  left: 0px;
+}
+.musicPage nav .nav-wrapper .tabs .music-nav:hover::after,
+.musicPage nav .nav-wrapper .tabs .home-nav:hover::after,
+.musicPage nav .nav-wrapper .tabs .videos-nav:hover::after,
+.musicPage nav .nav-wrapper .tabs .aboutMe-nav:hover::after {
+  transition-duration: 0.5s;
+  content: "";
+  height: 2px;
+  width: 100%;
+  background: #b1b1b1;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+}
+.musicPage nav .nav-wrapper .SM {
+  width: 20%;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row-reverse;
+  float: right;
+}
+.musicPage nav .nav-wrapper .SM a {
+  stroke: black;
+}
+.musicPage nav .nav-wrapper .SM a svg {
+  height: 30px;
+  width: 25px;
+}
+.musicPage nav .nav-wrapper .SM a svg :hover {
+  transition: 0.5s;
+  fill: black;
+  stroke: black;
+}
+.musicPage .Content--Music {
+  width: 95%;
+  margin: 50px auto;
+  border-radius: 30px 30px;
+  display: flex;
+  flex-direction: column;
+}
+.musicPage .Content--Music h1 {
+  position: fixed;
+  bottom: 0px;
+  font-size: 250px;
+  font-family: Alegreya;
+  letter-spacing: 5px;
+  color: rgba(90, 90, 90, 0.226);
+  text-align: left;
+  text-transform: uppercase;
+  margin: 5px;
+  z-index: 0;
+}
+.musicPage .Content--Music .RecordContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 100%;
+  max-width: 1100px;
+  margin: auto;
+  margin-bottom: 200px;
+}
+.musicPage .Content--Music .RecordContainer #record {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  margin: 10px;
+  z-index: 0;
+}
+.musicPage .Content--Music .RecordContainer #record:hover .overlay_coverImage {
+  transform: scale(1);
+}
+.musicPage .Content--Music .RecordContainer #record .overlay_coverImage {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  transform: scale(0);
+  transition: 0.3s ease;
+}
+.musicPage .Content--Music .RecordContainer #record .overlay_coverImage .text {
+  color: white;
+  font-size: 20px;
+  font-family: Alegreya;
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.musicPage .Content--Music .RecordContainer #record .overlay_coverImage .stream-line-1 {
+  position: absolute;
+  color: white;
+  top: 220px;
+  left: 50%;
+  transform: translate(-50%);
+  width: 45%;
+  margin: auto;
+  display: flex;
+  border: 2px solid #cacaca;
+  border-radius: 2px;
+}
+.musicPage .Content--Music .RecordContainer #record .overlay_coverImage .stream-line-2 {
+  position: absolute;
+  color: white;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 45%;
+  margin: 5px auto;
+  display: flex;
+  border: 2px solid #cacaca;
+  border-radius: 2px;
+}
+.musicPage .Content--Music .RecordContainer #record .overlay_coverImage .spotify-logo {
+  position: absolute;
+  color: white;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20%;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row-reverse;
+  float: right;
+}
+.musicPage .Content--Music .RecordContainer #record .overlay_coverImage .spotify-logo svg {
+  height: 30px;
+  width: 25px;
+}
+.musicPage .Content--Music .RecordContainer #record .overlay_coverImage .soundcloud-logo {
+  position: absolute;
+  color: white;
+  top: 80%;
+  left: 65%;
+  transform: translate(-50%, -50%);
+  width: 20%;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row-reverse;
+  float: right;
+}
+.musicPage .Content--Music .RecordContainer #record .overlay_coverImage .soundcloud-logo svg {
+  height: 30px;
+  width: 25px;
+}
+.musicPage .Content--Music .RecordContainer #record .overlay_coverImage .youtube-logo {
+  position: absolute;
+  color: white;
+  top: 80%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+  width: 20%;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row-reverse;
+  float: right;
+}
+.musicPage .Content--Music .RecordContainer #record .overlay_coverImage .youtube-logo svg {
+  height: 30px;
+  width: 25px;
+}
+.musicPage .Content--Music .RecordContainer .CoverImage-1 {
+  display: flex;
+  background-image: url("../Images/SUNRISE-COVER.jpg");
+  background-size: 100% 100%;
+  background-position: center;
+}
+.musicPage .Content--Music .RecordContainer .CoverImage-2 {
+  display: flex;
+  background-image: url("../Images/SUNSET-COVER.jpg");
+  background-size: 100% 100%;
+  background-position: center;
+}
+.musicPage .Content--Music .RecordContainer .CoverImage-3 {
+  display: flex;
+  background-image: url("../Images/MIDDAY-COVER.jpg");
+  background-size: 100% 100%;
+  background-position: center;
+}
+.musicPage .Content--Music .RecordContainer .CoverImage-4 {
+  display: flex;
+  background-image: url("../Images/MIDNIGHT-COVER.jpg");
+  background-size: 100% 100%;
+  background-position: center;
+}
+.musicPage .Content--Music .RecordContainer .CoverImage-5 {
+  display: flex;
+  background-image: url("../Images/MXM ALBUM ART.jpg");
+  background-size: 100% 100%;
+  background-position: center;
+}
+.musicPage .Content--Music .RecordContainer .CoverImage-6 {
+  display: flex;
+  background-image: url("../Images/PART 3 ALBUM ART.jpg");
+  background-size: 100% 100%;
+  background-position: center;
+}
+.musicPage .Content--Music .RecordContainer .CoverImage-7 {
+  display: flex;
+  background-image: url("../Images/Street Light.jpg");
+  background-size: 100% 100%;
+  background-position: center;
+}
+.musicPage .Content--Music .RecordContainer .CoverImage-8 {
+  display: flex;
+  background-image: url("../Images/4eva-cover.jpg");
+  background-size: 100% 100%;
+  background-position: center;
+}
+
+@media screen and (min-width: 850px) and (max-width: 1024px) {
+  body .musicPage .Content--Music h1 {
+    font-size: 170px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 849px) {
+  body .musicPage nav .nav-wrapper .Logo {
+    width: 10%;
+    margin: 0px 40px;
+  }
+  body .musicPage nav .nav-wrapper .tabs {
+    display: none;
+  }
+  body .musicPage nav .nav-wrapper .SM {
+    display: none;
+  }
+  body .musicPage nav .nav-wrapper .icon {
+    position: absolute;
+    width: 40px;
+    right: 40px;
+    padding: 0 8px;
+  }
+  body .musicPage nav .nav-wrapper .icon:hover {
+    cursor: pointer;
+  }
+  body .musicPage .Content--Music h1 {
+    font-size: 170px;
+  }
+}
+@media screen and (max-width: 768px) {
+  body .musicPage nav .nav-wrapper .Logo {
+    width: 10%;
+    margin: 5px 20px;
+  }
+  body .musicPage nav .nav-wrapper .tabs {
+    display: none;
+  }
+  body .musicPage nav .nav-wrapper .SM {
+    display: none;
+  }
+  body .musicPage nav .nav-wrapper .icon {
+    position: absolute;
+    width: 40px;
+    right: 20px;
+    padding: 0 8px;
+  }
+  body .musicPage nav .nav-wrapper .icon:hover {
+    cursor: pointer;
+  }
+  body .musicPage .Content--Music {
+    align-items: center;
+  }
+  body .musicPage .Content--Music .RecordContainer {
+    margin-bottom: 100px;
+  }
+  body .musicPage .Content--Music h1 {
+    font-size: 100px;
+  }
+}
+.Primary_Content {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.Primary_Content .AboutMe {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.Primary_Content .AboutMe nav {
+  height: 50px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  z-index: 2;
+}
+.Primary_Content .AboutMe nav .nav-wrapper {
+  height: 50px;
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+}
+.Primary_Content .AboutMe nav .nav-wrapper .Logo {
+  width: 10%;
+  margin: auto;
+  text-align: center;
+}
+.Primary_Content .AboutMe nav .nav-wrapper .Logo a {
+  color: #9e9e9e;
+  font-style: normal;
+  font-size: 30px;
+  font-family: Alegreya;
+}
+.Primary_Content .AboutMe nav .nav-wrapper .Logo a:hover {
+  cursor: pointer;
+}
+.Primary_Content .AboutMe nav .nav-wrapper .tabs {
+  display: flex;
+  justify-content: space-evenly;
+  width: 60%;
+  padding: 0px 100px;
+  margin: auto;
+  position: relative;
+  font-family: Alegreya;
+  text-transform: uppercase;
+}
+.Primary_Content .AboutMe nav .nav-wrapper .tabs .music-nav,
+.Primary_Content .AboutMe nav .nav-wrapper .tabs .home-nav,
+.Primary_Content .AboutMe nav .nav-wrapper .tabs .videos-nav,
+.Primary_Content .AboutMe nav .nav-wrapper .tabs .aboutMe-nav {
+  letter-spacing: 2px;
+  font-size: 20px;
+  color: #909090;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+}
+.Primary_Content .AboutMe nav .nav-wrapper .tabs .music-nav:hover,
+.Primary_Content .AboutMe nav .nav-wrapper .tabs .home-nav:hover,
+.Primary_Content .AboutMe nav .nav-wrapper .tabs .videos-nav:hover,
+.Primary_Content .AboutMe nav .nav-wrapper .tabs .aboutMe-nav:hover {
+  cursor: pointer;
+  color: black;
+}
+.Primary_Content .AboutMe nav .nav-wrapper .tabs .music-nav::after,
+.Primary_Content .AboutMe nav .nav-wrapper .tabs .home-nav::after,
+.Primary_Content .AboutMe nav .nav-wrapper .tabs .videos-nav::after,
+.Primary_Content .AboutMe nav .nav-wrapper .tabs .aboutMe-nav::after {
+  content: "";
+  height: 2px;
+  width: 0px;
+  background: #000000;
+  position: absolute;
+  top: 25px;
+  bottom: 0px;
+  left: 0px;
+}
+.Primary_Content .AboutMe nav .nav-wrapper .tabs .music-nav:hover::after,
+.Primary_Content .AboutMe nav .nav-wrapper .tabs .home-nav:hover::after,
+.Primary_Content .AboutMe nav .nav-wrapper .tabs .videos-nav:hover::after,
+.Primary_Content .AboutMe nav .nav-wrapper .tabs .aboutMe-nav:hover::after {
+  transition-duration: 0.5s;
+  content: "";
+  height: 2px;
+  width: 100%;
+  background: #000000;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+}
+.Primary_Content .AboutMe nav .nav-wrapper .SM {
+  width: 20%;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row-reverse;
+  float: right;
+}
+.Primary_Content .AboutMe nav .nav-wrapper .SM a {
+  stroke: black;
+}
+.Primary_Content .AboutMe nav .nav-wrapper .SM a svg {
+  height: 30px;
+  width: 25px;
+}
+.Primary_Content .AboutMe nav .nav-wrapper .SM a svg :hover {
+  transition: 0.5s;
+  fill: black;
+  stroke: black;
+}
+.Primary_Content .AboutMe .Content {
+  background-color: whitesmoke;
+  width: 95%;
+  max-width: 1100px;
+  height: 100%;
+  min-height: 500px;
+  margin: 50px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.Primary_Content .AboutMe .Content .Description {
+  display: flex;
+  width: 50%;
+  align-items: center;
+}
+.Primary_Content .AboutMe .Content .Description .Text {
+  height: 80%;
+  width: 80%;
+  font-size: 30px;
+  font-family: alegreya;
+  font-weight: bold;
+}
+.Primary_Content .AboutMe .Content .Description .Text p {
+  font-size: 20px;
+  font-weight: lighter;
+  line-height: 26px;
+}
+.Primary_Content .AboutMe .Content .Description .Text h1 {
+  letter-spacing: 3px;
+}
+.Primary_Content .AboutMe .Content .ArtistImage {
+  display: flex;
+  width: 400px;
+  height: 550px;
+  background-image: url("../Images/Dihwa.png");
+  background-size: cover;
+  background-position: center;
+}
+.Primary_Content footer {
+  height: 250px;
+  width: 100%;
+  background-color: #3c3c3c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Primary_Content footer .footerContent {
+  width: 40%;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+}
+.Primary_Content footer .footerContent .footer--title {
+  text-align: center;
+  font-size: 42px;
+  color: #cbcbcb;
+}
+.Primary_Content footer .footerContent hr {
+  width: 20%;
+  margin: auto;
+}
+.Primary_Content footer .footerContent .ContactIcons {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.Primary_Content footer .footerContent .ContactIcons svg {
+  padding: 5px;
+  width: 130px;
+  height: 45px;
+}
+.Primary_Content footer .footerContent .ContactIcons .Icon1 {
+  width: 40px;
+}
+.Primary_Content footer .footerContent .ContactIcons .Icon2 {
+  width: 35px;
+}
+.Primary_Content footer .footerContent .ContactIcons .Icon3 {
+  width: 42px;
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+  body .Primary_Content .Landing h1 {
+    font-size: 100pxx;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 849px) {
+  body .Primary_Content .AboutMe nav .nav-wrapper .Logo {
+    width: 10%;
+    margin: 0px 40px;
+  }
+  body .Primary_Content .AboutMe nav .nav-wrapper .tabs {
+    display: none;
+  }
+  body .Primary_Content .AboutMe nav .nav-wrapper .SM {
+    display: none;
+  }
+  body .Primary_Content .AboutMe nav .nav-wrapper .icon {
+    position: absolute;
+    width: 40px;
+    right: 40px;
+    padding: 0 8px;
+  }
+  body .Primary_Content .AboutMe nav .nav-wrapper .icon:hover {
+    cursor: pointer;
+  }
+  body .Primary_Content .AboutMe .Content {
+    flex-direction: column-reverse;
+    width: 90%;
+  }
+  body .Primary_Content .AboutMe .Content .Description {
+    padding: 5px;
+    width: 90%;
+  }
+  body .Primary_Content .AboutMe .Content .Description .Text {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  body .Primary_Content .AboutMe .Content .Description h1 {
+    margin: 0;
+    text-align: center;
+  }
+  body .Primary_Content .AboutMe .Content .ArtistImage {
+    height: 400px;
+    width: 70%;
+    margin: 15px;
+  }
+}
+@media screen and (max-width: 768px) {
+  body .Primary_Content .AboutMe nav .nav-wrapper .Logo {
+    width: 10%;
+    margin: 5px 20px;
+  }
+  body .Primary_Content .AboutMe nav .nav-wrapper .tabs {
+    display: none;
+  }
+  body .Primary_Content .AboutMe nav .nav-wrapper .SM {
+    display: none;
+  }
+  body .Primary_Content .AboutMe nav .nav-wrapper .icon {
+    position: absolute;
+    width: 40px;
+    right: 20px;
+    padding: 0 8px;
+  }
+  body .Primary_Content .AboutMe nav .nav-wrapper .icon:hover {
+    cursor: pointer;
+  }
+  body .Primary_Content .AboutMe .Content {
+    flex-direction: column-reverse;
+    width: 90%;
+  }
+  body .Primary_Content .AboutMe .Content .Description {
+    padding: 5px;
+    width: 90%;
+  }
+  body .Primary_Content .AboutMe .Content .Description .Text {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  body .Primary_Content .AboutMe .Content .Description h1 {
+    margin: 0;
+    text-align: center;
+  }
+  body .Primary_Content .AboutMe .Content .ArtistImage {
+    height: 400px;
+    width: 70%;
+    margin: 15px;
+  }
+  body .Primary_Content footer .footerContent {
+    width: 100%;
+  }
+}
+body {
+  padding: 0;
+  margin: 0;
+}
+body .AudioPlayer {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.836);
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  flex-direction: column;
+  z-index: 1;
+}
+body .AudioPlayer a {
+  font-size: 30px;
+  color: white;
+  position: absolute;
+  right: 10px;
+  top: 50px;
+}
+body .AudioPlayer a:hover {
+  cursor: pointer;
+  color: lightgray;
+  transition: 0.5s;
+}
+body .AudioPlayer iframe {
+  width: 300px;
+  margin: auto;
+}
+body .Menu {
+  position: fixed;
+  right: 0;
+  width: 0;
+  height: 100vh;
+  background-color: black;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+body .Menu ul {
+  padding: 0;
+  margin: 7px 0px;
+  width: 250px;
+}
+body .Menu ul li {
+  width: 100%;
+  list-style: none;
+  color: white;
+  margin: 10px 0px;
+  padding: 5px 0px;
+  text-align: center;
+}
+body .Menu ul li:hover {
+  background-color: rgba(128, 128, 128, 0.612);
+  transition: 0.5s;
+  cursor: pointer;
+}
+body .Menu ul li a {
+  color: white;
+  text-decoration: none;
+}
+body .Menu .SM {
+  display: inline-block;
+  width: 250px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+body .Menu .SM a {
+  stroke: black;
+  padding: 5px;
+}
+body .Menu .SM a svg {
+  height: 30px;
+  width: 25px;
+}
+body .Menu .SM a svg :hover {
+  transition: 0.5s;
+  fill: whitesmoke;
+  stroke: white;
+}
+body .BB {
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.694);
+  width: 0;
+  height: 100vh;
+  position: fixed;
+  margin-top: 50px;
+  left: 0;
+}
+body .Primary_Content .Landing {
+  background-image: url("../Images/landing-header-2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  width: 100%;
+  max-width: 1470px;
+  height: 100vh;
+  max-height: 715px;
+  min-height: 500px;
+  margin: 0 auto;
+  position: relative;
+}
+body .Primary_Content .Landing .Landing-details {
+  position: absolute;
+  top: 25%;
+  left: 10%;
+}
+body .Primary_Content .Landing .Landing-details__heading {
+  display: block;
+  font-size: 140px;
+  font-family: Roman Morrissey DEMO;
+  color: white;
+  text-shadow: #000000 0px 0px 10px;
+  top: 10%;
+  left: 5%;
+  letter-spacing: 15px;
+}
+body .Primary_Content .Landing .Landing-details__button {
+  display: inline-block;
+  align-content: left;
+}
+body .Primary_Content .Landing .Landing-details__button--main {
+  display: inline-block;
+  width: 210px;
+  height: 40px;
+  border: 3px solid black;
+  background-color: black;
+  color: white;
+  text-align: center;
+  margin: 0 40px auto auto;
+  border-radius: 20px 20px;
+  line-height: 40px;
+  font-family: Alegreya;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+body .Primary_Content .Landing .Landing-details__button--main:hover {
+  opacity: 0.9;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+}
+body .Primary_Content .Landing .Landing-details__button--main:focus {
+  border-color: transparent !important;
+  outline: none;
+}
+body .Primary_Content .Landing .Landing-details__button--sub {
+  display: inline-block;
+  width: 210px;
+  height: 40px;
+  border: 3px solid white;
+  background-color: white;
+  color: black;
+  text-align: center;
+  margin: 0 auto;
+  border-radius: 20px 20px;
+  line-height: 40px;
+  font-family: Alegreya;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+body .Primary_Content .Landing .Landing-details__button--sub:hover {
+  opacity: 0.9;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
+body .Primary_Content .Landing .Landing-details__button--sub:focus {
+  border-color: transparent !important;
+  outline: none;
+}
+body .Primary_Content .Landing nav {
+  height: 50px;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1500px;
+  background-color: rgba(255, 255, 255, 0.9);
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  z-index: 2;
+}
+body .Primary_Content .Landing nav .nav-wrapper {
+  height: 50px;
+  width: 100%;
+  max-width: 1500px;
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+}
+body .Primary_Content .Landing nav .nav-wrapper .Logo {
+  width: 10%;
+  margin: auto;
+  text-align: center;
+}
+body .Primary_Content .Landing nav .nav-wrapper .Logo a {
+  color: #9e9e9e;
+  font-style: normal;
+  font-size: 30px;
+  font-family: Roman Morrissey DEMO;
+  text-decoration: none;
+}
+body .Primary_Content .Landing nav .nav-wrapper .Logo a:hover {
+  cursor: pointer;
+}
+body .Primary_Content .Landing nav .nav-wrapper .tabs {
+  display: flex;
+  justify-content: space-evenly;
+  width: 60%;
+  padding: 0px 100px;
+  margin: auto;
+  position: relative;
+  font-family: Alegreya;
+  text-transform: uppercase;
+}
+body .Primary_Content .Landing nav .nav-wrapper .tabs .music-nav,
+body .Primary_Content .Landing nav .nav-wrapper .tabs .home-nav,
+body .Primary_Content .Landing nav .nav-wrapper .tabs .videos-nav,
+body .Primary_Content .Landing nav .nav-wrapper .tabs .aboutMe-nav {
+  letter-spacing: 2px;
+  font-size: 20px;
+  color: #909090;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+}
+body .Primary_Content .Landing nav .nav-wrapper .tabs .music-nav:hover,
+body .Primary_Content .Landing nav .nav-wrapper .tabs .home-nav:hover,
+body .Primary_Content .Landing nav .nav-wrapper .tabs .videos-nav:hover,
+body .Primary_Content .Landing nav .nav-wrapper .tabs .aboutMe-nav:hover {
+  cursor: pointer;
+  color: black;
+}
+body .Primary_Content .Landing nav .nav-wrapper .tabs .music-nav::after,
+body .Primary_Content .Landing nav .nav-wrapper .tabs .home-nav::after,
+body .Primary_Content .Landing nav .nav-wrapper .tabs .videos-nav::after,
+body .Primary_Content .Landing nav .nav-wrapper .tabs .aboutMe-nav::after {
+  content: "";
+  height: 2px;
+  width: 0px;
+  background: #000000;
+  position: absolute;
+  top: 25px;
+  bottom: 0px;
+  left: 0px;
+}
+body .Primary_Content .Landing nav .nav-wrapper .tabs .music-nav:hover::after,
+body .Primary_Content .Landing nav .nav-wrapper .tabs .home-nav:hover::after,
+body .Primary_Content .Landing nav .nav-wrapper .tabs .videos-nav:hover::after,
+body .Primary_Content .Landing nav .nav-wrapper .tabs .aboutMe-nav:hover::after {
+  transition-duration: 0.5s;
+  content: "";
+  height: 2px;
+  width: 100%;
+  background: #000000;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+}
+body .Primary_Content .Landing nav .nav-wrapper .SM {
+  width: 20%;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row-reverse;
+  float: right;
+}
+body .Primary_Content .Landing nav .nav-wrapper .SM a {
+  stroke: black;
+}
+body .Primary_Content .Landing nav .nav-wrapper .SM a svg {
+  height: 30px;
+  width: 25px;
+}
+body .Primary_Content .Landing nav .nav-wrapper .SM a svg :hover {
+  transition: 0.5s;
+  fill: black;
+  stroke: black;
+}
+body .Primary_Content .Music {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 700px;
+  overflow: hidden;
+  align-items: center;
+}
+body .Primary_Content .Music .header {
+  position: absolute;
+  display: block;
+  width: 100%;
+  max-width: 1100px;
+  margin: auto;
+  top: 100%;
+}
+body .Primary_Content .Music .header h1 {
+  display: inline-block;
+  text-align: left;
+  font-family: alegreya;
+  font-size: 200px;
+  text-transform: uppercase;
+  font-style: none;
+  font-weight: lighter;
+  letter-spacing: 5px;
+  color: #757575;
+  opacity: 0.2;
+  margin: 20px 120px;
+}
+body .Primary_Content .Music .slideshow-container {
+  width: 1100px;
+  height: 520px;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  margin: auto;
+}
+body .Primary_Content .Music .slideshow-container .first .AlbumContainer .AlbumCover {
+  background-image: url("../Images/4eva-cover.jpg");
+  background-size: cover;
+  background-position: center;
+}
+body .Primary_Content .Music .slideshow-container .first .AlbumContainer .AlbumCover .stream_details_first {
+  display: none;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  border-radius: 20px 20px;
+  background-color: rgba(0, 0, 0, 0.747);
+}
+body .Primary_Content .Music .slideshow-container .first .AlbumContainer .AlbumCover .stream_details_first h2 {
+  color: white;
+  text-align: center;
+}
+body .Primary_Content .Music .slideshow-container .first .AlbumContainer .AlbumCover .stream_details_first .stream_service {
+  height: 50px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+body .Primary_Content .Music .slideshow-container .first .AlbumContainer .AlbumCover .stream_details_first .stream_service a {
+  width: 15px;
+  padding: 5px;
+}
+body .Primary_Content .Music .slideshow-container .first .AlbumContainer .AlbumCover .stream_details_first .stream_service a svg {
+  position: relative;
+  width: 30px;
+}
+body .Primary_Content .Music .slideshow-container .first .AlbumContainer .AlbumCover .stream_details_first .stream_service a svg :hover {
+  transition: 0.5s;
+  fill: #afafaf;
+  cursor: pointer;
+}
+body .Primary_Content .Music .slideshow-container .first .AlbumContainer .AlbumCover .stream_details_first .widget {
+  display: flex;
+  justify-content: center;
+}
+body .Primary_Content .Music .slideshow-container .first .AlbumContainer .AlbumCover .stream_details_first .widget iframe {
+  margin: 12% 0;
+}
+body .Primary_Content .Music .slideshow-container .second .AlbumCover {
+  background-image: url("../Images/4now.jpg");
+  background-size: cover;
+  background-position: center;
+}
+body .Primary_Content .Music .slideshow-container .second .AlbumCover .stream_details_second {
+  display: none;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  border-radius: 20px 20px;
+  background-color: rgba(0, 0, 0, 0.747);
+}
+body .Primary_Content .Music .slideshow-container .second .AlbumCover .stream_details_second h2 {
+  color: white;
+  text-align: center;
+}
+body .Primary_Content .Music .slideshow-container .second .AlbumCover .stream_details_second .stream_service {
+  height: 50px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+body .Primary_Content .Music .slideshow-container .second .AlbumCover .stream_details_second .stream_service a {
+  width: 15px;
+  padding: 5px;
+}
+body .Primary_Content .Music .slideshow-container .second .AlbumCover .stream_details_second .stream_service a svg {
+  position: relative;
+  width: 30px;
+}
+body .Primary_Content .Music .slideshow-container .second .AlbumCover .stream_details_second .stream_service a svg :hover {
+  transition: 0.5s;
+  fill: #afafaf;
+  cursor: pointer;
+}
+body .Primary_Content .Music .slideshow-container .second .AlbumCover .stream_details_second .widget {
+  display: flex;
+  justify-content: center;
+}
+body .Primary_Content .Music .slideshow-container .second .AlbumCover .stream_details_second .widget iframe {
+  margin: 12% 0;
+}
+body .Primary_Content .Music .slideshow-container .third .AlbumCover {
+  background-image: url("../Images/Street Light.jpg");
+  background-size: cover;
+  background-position: center;
+}
+body .Primary_Content .Music .slideshow-container .third .AlbumCover .stream_details_third {
+  display: none;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  border-radius: 20px 20px;
+  background-color: rgba(0, 0, 0, 0.747);
+}
+body .Primary_Content .Music .slideshow-container .third .AlbumCover .stream_details_third h2 {
+  color: white;
+  text-align: center;
+}
+body .Primary_Content .Music .slideshow-container .third .AlbumCover .stream_details_third .stream_service {
+  height: 50px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+body .Primary_Content .Music .slideshow-container .third .AlbumCover .stream_details_third .stream_service a {
+  width: 15px;
+  padding: 5px;
+}
+body .Primary_Content .Music .slideshow-container .third .AlbumCover .stream_details_third .stream_service a svg {
+  position: relative;
+  width: 30px;
+}
+body .Primary_Content .Music .slideshow-container .third .AlbumCover .stream_details_third .stream_service a svg :hover {
+  transition: 0.5s;
+  fill: #afafaf;
+  cursor: pointer;
+}
+body .Primary_Content .Music .slideshow-container .third .AlbumCover .stream_details_third .widget {
+  display: flex;
+  justify-content: center;
+}
+body .Primary_Content .Music .slideshow-container .third .AlbumCover .stream_details_third .widget iframe {
+  margin: 12% 0;
+}
+body .Primary_Content .Music .slideshow-container #mySlides {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: inherit;
+}
+body .Primary_Content .Music .slideshow-container #mySlides .AlbumContainer {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin: 0 auto;
+}
+body .Primary_Content .Music .slideshow-container #mySlides .AlbumContainer .AlbumCover {
+  width: 400px;
+  margin: 0px auto 10px auto;
+  height: 370px;
+  border-radius: 20px 20px;
+}
+body .Primary_Content .Music .slideshow-container #mySlides .AlbumContainer #MoreMusic {
+  width: 130px;
+  font-size: 20px;
+  color: #909090;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  margin: 0 auto;
+}
+body .Primary_Content .Music .slideshow-container #mySlides .AlbumContainer #MoreMusic:hover {
+  cursor: pointer;
+  color: black;
+}
+body .Primary_Content .Music .slideshow-container #mySlides .AlbumContainer #MoreMusic::after {
+  content: "";
+  height: 2px;
+  width: 12px;
+  background: #000000;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+}
+body .Primary_Content .Music .slideshow-container #mySlides .AlbumContainer #MoreMusic:hover::after {
+  transition-duration: 0.5s;
+  content: "";
+  height: 2px;
+  width: 125px;
+  background: #000000;
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+}
+body .Primary_Content .Music .slideshow-container .SongInfo {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 0;
+  font-family: Alegreya;
+}
+body .Primary_Content .Music .slideshow-container .SongInfo__Details {
+  width: 40%;
+  height: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+body .Primary_Content .Music .slideshow-container .SongInfo__Details p {
+  font-size: 40px;
+  color: #616161;
+  font-family: Alegreya;
+  font-weight: 20;
+  margin-top: 0;
+}
+body .Primary_Content .Music .slideshow-container .SongInfo__Details .AlbumName {
+  color: #909090;
+  font-family: Alegreya;
+  font-weight: 20;
+}
+body .Primary_Content .Music .slideshow-container .prev,
+body .Primary_Content .Music .slideshow-container .next {
+  cursor: pointer;
+  position: absolute;
+  top: 25%;
+  width: auto;
+  color: black;
+  font-weight: bold;
+  font-size: 24px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+body .Primary_Content .Music .slideshow-container .prev:hover,
+body .Primary_Content .Music .slideshow-container .next:hover {
+  background-color: rgba(169, 168, 168, 0.8);
+}
+body .Primary_Content .Music .slideshow-container .next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+body .Primary_Content .Music .slideshow-container .fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+body .Primary_Content .Music .slideshow-container .button_sub-1,
+body .Primary_Content .Music .slideshow-container .button_sub-2,
+body .Primary_Content .Music .slideshow-container .button_sub-3 {
+  display: inline-block;
+  position: relative;
+  margin: 15px 28%;
+  padding: 5px 70px;
+  background-color: rgba(0, 0, 0, 0);
+  color: black;
+  font-size: 20px;
+  font-family: alegreya;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border: 3px solid black;
+  border-radius: 50px;
+  cursor: pointer;
+}
+body .Primary_Content .Music .slideshow-container .button_sub-1:hover,
+body .Primary_Content .Music .slideshow-container .button_sub-2:hover,
+body .Primary_Content .Music .slideshow-container .button_sub-3:hover {
+  background-color: black;
+  color: white;
+}
+body .Primary_Content .Music .slideshow-container .button_sub-1:active,
+body .Primary_Content .Music .slideshow-container .button_sub-2:active,
+body .Primary_Content .Music .slideshow-container .button_sub-3:active {
+  transform: translateY(1px);
+  border: 3px solid black;
+  border-radius: 50px;
+}
+body .Primary_Content .Music .slideshow-container .button_sub-1:focus,
+body .Primary_Content .Music .slideshow-container .button_sub-2:focus,
+body .Primary_Content .Music .slideshow-container .button_sub-3:focus {
+  border: 3px solid black;
+  border-radius: 50px;
+  outline: none;
+}
+body .Primary_Content .Videos {
+  display: flex;
+  flex-direction: column;
+  height: 700px;
+  overflow: hidden;
+  text-align: center;
+  background-color: #E8E8E8;
+  margin: 0 40px 40px 40px;
+}
+body .Primary_Content .Videos h1 {
+  text-align: left;
+  font-size: 100px;
+  color: black;
+  margin: 0px 0px 0px 0px;
+  text-transform: uppercase;
+  font-family: Alegreya;
+  font-weight: lighter;
+  letter-spacing: 5px;
+  padding-bottom: 0px;
+}
+body .Primary_Content .Videos .Video_Container {
+  height: 90%;
+  max-width: 1100px;
+  width: 70%;
+  margin: auto;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+body .Primary_Content .Videos .Video_Container .Main_Video {
+  position: relative;
+  width: 100%;
+  display: flex;
+  height: 55%;
+  margin: auto;
+  border-radius: 15px 15px 15px 15px;
+  background-image: url("../Images/Main Video.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+body .Primary_Content .Videos .Video_Container .Main_Video .PlayVid {
+  position: absolute;
+  width: 250px;
+  height: 70px;
+  display: flex;
+  flex-direction: row;
+  bottom: 0;
+}
+body .Primary_Content .Videos .Video_Container .Main_Video .PlayVid svg {
+  margin: 10px 15px;
+  width: 35px;
+}
+body .Primary_Content .Videos .Video_Container .Main_Video .PlayVid p {
+  font-size: 25px;
+  color: white;
+  text-decoration: none;
+}
+body .Primary_Content .Videos .Video_Container .Main_Video .PlayVid p span {
+  font-weight: bold;
+}
+body .Primary_Content .Videos .Video_Container .Main_Video::after {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.461);
+  width: 100%;
+  height: 100%;
+}
+body .Primary_Content .Videos .Video_Container .Other_Video {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 150px;
+  width: 100%;
+}
+body .Primary_Content .Videos .Video_Container .Other_Video .Vid1,
+body .Primary_Content .Videos .Video_Container .Other_Video .Vid2,
+body .Primary_Content .Videos .Video_Container .Other_Video .Vid3 {
+  position: relative;
+  display: flex;
+  width: 32%;
+  height: 80%;
+  margin: 2% 0;
+}
+body .Primary_Content .Videos .Video_Container .Other_Video .Vid1 .PlayVid,
+body .Primary_Content .Videos .Video_Container .Other_Video .Vid2 .PlayVid,
+body .Primary_Content .Videos .Video_Container .Other_Video .Vid3 .PlayVid {
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  bottom: 0;
+}
+body .Primary_Content .Videos .Video_Container .Other_Video .Vid1 .PlayVid svg,
+body .Primary_Content .Videos .Video_Container .Other_Video .Vid2 .PlayVid svg,
+body .Primary_Content .Videos .Video_Container .Other_Video .Vid3 .PlayVid svg {
+  margin: 10px 10px;
+  width: 18px;
+}
+body .Primary_Content .Videos .Video_Container .Other_Video .Vid1 .PlayVid p,
+body .Primary_Content .Videos .Video_Container .Other_Video .Vid2 .PlayVid p,
+body .Primary_Content .Videos .Video_Container .Other_Video .Vid3 .PlayVid p {
+  font-size: 12px;
+  color: white;
+  text-decoration: none;
+}
+body .Primary_Content .Videos .Video_Container .Other_Video .Vid1 .PlayVid p span,
+body .Primary_Content .Videos .Video_Container .Other_Video .Vid2 .PlayVid p span,
+body .Primary_Content .Videos .Video_Container .Other_Video .Vid3 .PlayVid p span {
+  font-weight: bold;
+}
+body .Primary_Content .Videos .Video_Container .Other_Video .Vid1::after,
+body .Primary_Content .Videos .Video_Container .Other_Video .Vid2::after,
+body .Primary_Content .Videos .Video_Container .Other_Video .Vid3::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.434);
+}
+body .Primary_Content .Videos .Video_Container .Other_Video .Vid1 {
+  background-image: url("../images/Lights.jpg");
+  background-size: cover;
+  background-position: center;
+}
+body .Primary_Content .Videos .Video_Container .Other_Video .Vid2 {
+  background-image: url("../Images/Camera2.jpg");
+  background-size: cover;
+  background-position: center;
+}
+body .Primary_Content .Videos .Video_Container .Other_Video .Vid3 {
+  background-image: url("../Images/Video2.jpg");
+  background-size: cover;
+  background-position: center;
+}
+body .Primary_Content .Videos .Video_Container .moreVideos {
+  position: absolute;
+}
+body .Primary_Content .Videos .Video_Container .moreVideos a {
+  top: 0px;
+  font-size: 20px;
+  color: #909090;
+  text-decoration: none;
+}
+body .Primary_Content .Videos .Video_Container .moreVideos a:hover {
+  cursor: pointer;
+  color: black;
+}
+body .Primary_Content .Videos .Video_Container .moreVideos a::after {
+  content: "";
+  height: 2px;
+  width: 12px;
+  background: #000000;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+}
+body .Primary_Content .Videos .Video_Container .moreVideos a:hover::after {
+  transition-duration: 0.5s;
+  content: "";
+  height: 2px;
+  width: 135px;
+  background: #000000;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+}
+body .Primary_Content footer {
+  height: 250px;
+  width: 100%;
+  background-color: #3c3c3c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+body .Primary_Content footer .footerContent {
+  width: 40%;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+}
+body .Primary_Content footer .footerContent .footer--title {
+  text-align: center;
+  font-size: 42px;
+  color: #cbcbcb;
+}
+body .Primary_Content footer .footerContent hr {
+  width: 20%;
+  margin: auto;
+}
+body .Primary_Content footer .footerContent .ContactIcons {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+body .Primary_Content footer .footerContent .ContactIcons svg {
+  padding: 5px;
+  width: 130px;
+  height: 45px;
+}
+body .Primary_Content footer .footerContent .ContactIcons .Icon1 {
+  width: 40px;
+}
+body .Primary_Content footer .footerContent .ContactIcons .Icon2 {
+  width: 35px;
+}
+body .Primary_Content footer .footerContent .ContactIcons .Icon3 {
+  width: 42px;
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+  body .Primary_Content .Landing .Landing-details .Landing-details__heading {
+    font-size: 125px;
+  }
+  body .Primary_Content .Music .slideshow-container {
+    width: 900px;
+  }
+  body .Primary_Content .Music .slideshow-container #mySlides .AlbumContainer .AlbumCover {
+    height: 320px;
+    width: 300px;
+  }
+  body .Primary_Content .Music .slideshow-container #mySlides .AlbumContainer .listen {
+    display: flex;
+    justify-content: center;
+    margin: 5% auto;
+  }
+  body .Primary_Content .Music .slideshow-container #mySlides .AlbumContainer .listen .button_sub-1,
+body .Primary_Content .Music .slideshow-container #mySlides .AlbumContainer .listen .button_sub-2,
+body .Primary_Content .Music .slideshow-container #mySlides .AlbumContainer .listen .button_sub-3 {
+    margin: 5% auto;
+  }
+  body .Primary_Content .Music .slideshow-container #mySlides .SongInfo .SongInfo__Details p {
+    font-size: 30px;
+  }
+}
+@media screen and (min-width: 850px) and (max-width: 1024px) {
+  body .Primary_Content .Landing .Landing-details .Landing-details__heading {
+    font-size: 100px;
+  }
+  body .Primary_Content .Music .slideshow-container {
+    width: 800px;
+  }
+  body .Primary_Content .Music .slideshow-container #mySlides .AlbumContainer .AlbumCover {
+    height: 320px;
+    width: 300px;
+  }
+  body .Primary_Content .Music .slideshow-container #mySlides .AlbumContainer .listen {
+    display: flex;
+    justify-content: center;
+    margin: 5% auto;
+  }
+  body .Primary_Content .Music .slideshow-container #mySlides .AlbumContainer .listen .button_sub-1,
+body .Primary_Content .Music .slideshow-container #mySlides .AlbumContainer .listen .button_sub-2,
+body .Primary_Content .Music .slideshow-container #mySlides .AlbumContainer .listen .button_sub-3 {
+    margin: 5% auto;
+  }
+  body .Primary_Content .Music .slideshow-container #mySlides .SongInfo .SongInfo__Details p {
+    font-size: 30px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 849px) {
+  body .Primary_Content .Landing .Landing-details {
+    left: 5%;
+  }
+  body .Primary_Content .Landing .Landing-details .Landing-details__heading {
+    font-size: 100px;
+  }
+  body .Primary_Content .Landing nav .nav-wrapper .Logo {
+    width: 10%;
+    margin: 0px 40px;
+  }
+  body .Primary_Content .Landing nav .nav-wrapper .tabs {
+    display: none;
+  }
+  body .Primary_Content .Landing nav .nav-wrapper .SM {
+    display: none;
+  }
+  body .Primary_Content .Landing nav .nav-wrapper .icon {
+    position: absolute;
+    width: 40px;
+    right: 40px;
+    padding: 0 8px;
+  }
+  body .Primary_Content .Landing nav .nav-wrapper .icon:hover {
+    cursor: pointer;
+  }
+  body .Primary_Content .Music .header {
+    width: 100%;
+    max-width: 1100px;
+    text-align: center;
+    margin: 20px auto;
+    top: 90%;
+  }
+  body .Primary_Content .Music .header h1 {
+    font-size: 150px;
+    margin: 0px auto;
+  }
+  body .Primary_Content .Music .slideshow-container {
+    width: 550px;
+  }
+  body .Primary_Content .Music .slideshow-container #mySlides {
+    flex-direction: column;
+  }
+  body .Primary_Content .Music .slideshow-container #mySlides .AlbumContainer .AlbumCover {
+    height: 320px;
+    width: 300px;
+  }
+  body .Primary_Content .Music .slideshow-container #mySlides .AlbumContainer .listen {
+    display: flex;
+    justify-content: center;
+    margin: 5% auto;
+  }
+  body .Primary_Content .Music .slideshow-container #mySlides .AlbumContainer .listen .button_sub-1,
+body .Primary_Content .Music .slideshow-container #mySlides .AlbumContainer .listen .button_sub-2,
+body .Primary_Content .Music .slideshow-container #mySlides .AlbumContainer .listen .button_sub-3 {
+    margin: 5% auto;
+  }
+  body .Primary_Content .Music .slideshow-container #mySlides .SongInfo {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  body .Primary_Content .Landing {
+    background-position: right;
+  }
+  body .Primary_Content .Landing .Landing-details {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+  body .Primary_Content .Landing .Landing-details .Landing-details__heading {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 100px;
+  }
+  body .Primary_Content .Landing nav .nav-wrapper .Logo {
+    width: 10%;
+    margin: 5px 20px;
+  }
+  body .Primary_Content .Landing nav .nav-wrapper .tabs {
+    display: none;
+  }
+  body .Primary_Content .Landing nav .nav-wrapper .SM {
+    display: none;
+  }
+  body .Primary_Content .Landing nav .nav-wrapper .icon {
+    position: absolute;
+    width: 40px;
+    right: 20px;
+    padding: 0 8px;
+  }
+  body .Primary_Content .Landing nav .nav-wrapper .icon:hover {
+    cursor: pointer;
+  }
+  body .Primary_Content .Music {
+    height: 600px;
+    align-items: center;
+  }
+  body .Primary_Content .Music .header {
+    width: 100%;
+    text-align: center;
+    margin: 20px auto;
+    top: 90%;
+  }
+  body .Primary_Content .Music .header h1 {
+    font-size: 100px;
+    margin: 0px auto;
+  }
+  body .Primary_Content .Music .slideshow-container {
+    width: 90%;
+    height: 480px;
+  }
+  body .Primary_Content .Music .slideshow-container #mySlides {
+    flex-direction: column;
+  }
+  body .Primary_Content .Music .slideshow-container #mySlides .AlbumContainer {
+    margin: 0px auto;
+    width: 80%;
+    max-width: 300px;
+  }
+  body .Primary_Content .Music .slideshow-container #mySlides .AlbumContainer .AlbumCover {
+    height: 320px;
+    width: 100%;
+  }
+  body .Primary_Content .Music .slideshow-container #mySlides .AlbumContainer .listen {
+    display: flex;
+    justify-content: center;
+    margin: 5% auto;
+  }
+  body .Primary_Content .Music .slideshow-container #mySlides .AlbumContainer .listen .button_sub-1,
+body .Primary_Content .Music .slideshow-container #mySlides .AlbumContainer .listen .button_sub-2,
+body .Primary_Content .Music .slideshow-container #mySlides .AlbumContainer .listen .button_sub-3 {
+    margin: 0;
+  }
+  body .Primary_Content .Music .slideshow-container #mySlides .SongInfo {
+    display: none;
+  }
+  body .Primary_Content .Videos {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    height: 100%;
+  }
+  body .Primary_Content .Videos h1 {
+    font-size: 70px;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  body .Primary_Content .Videos .Video_Container {
+    text-align: center;
+    width: 90%;
+  }
+  body .Primary_Content .Videos .Video_Container .Main_Video {
+    width: 100%;
+    height: 300px;
+  }
+  body .Primary_Content .Videos .Video_Container .Other_Video {
+    height: 40%;
+    flex-direction: column;
+  }
+  body .Primary_Content .Videos .Video_Container .Other_Video a {
+    height: 300px;
+    border-radius: 15px 15px;
+  }
+  body .Primary_Content .Videos .Video_Container .Other_Video .Vid1,
+body .Primary_Content .Videos .Video_Container .Other_Video .Vid2,
+body .Primary_Content .Videos .Video_Container .Other_Video .Vid3 {
+    width: 100%;
+    height: 300px;
+  }
+  body .Primary_Content .Videos .Video_Container .Other_Video .Vid1 .PlayVid,
+body .Primary_Content .Videos .Video_Container .Other_Video .Vid2 .PlayVid,
+body .Primary_Content .Videos .Video_Container .Other_Video .Vid3 .PlayVid {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    bottom: 0;
+  }
+  body .Primary_Content .Videos .Video_Container .Other_Video .Vid1 .PlayVid svg,
+body .Primary_Content .Videos .Video_Container .Other_Video .Vid2 .PlayVid svg,
+body .Primary_Content .Videos .Video_Container .Other_Video .Vid3 .PlayVid svg {
+    margin: 10px 15px;
+    width: 35px;
+  }
+  body .Primary_Content .Videos .Video_Container .Other_Video .Vid1 .PlayVid p,
+body .Primary_Content .Videos .Video_Container .Other_Video .Vid2 .PlayVid p,
+body .Primary_Content .Videos .Video_Container .Other_Video .Vid3 .PlayVid p {
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+  }
+  body .Primary_Content .Videos .Video_Container .Other_Video .Vid1 .PlayVid p span,
+body .Primary_Content .Videos .Video_Container .Other_Video .Vid2 .PlayVid p span,
+body .Primary_Content .Videos .Video_Container .Other_Video .Vid3 .PlayVid p span {
+    font-weight: bold;
+  }
+  body .Primary_Content footer .footerContent {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */

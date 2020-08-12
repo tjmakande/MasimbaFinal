@@ -1,0 +1,22 @@
+{
+    "name": "masimba",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "Runscss": "sass --watch ./public/css/index.scss ./public/css/index.css",
+        "runmine": "sass --watch ./index2.scss ./index.css",
+        "start": "nodemon server.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "body-parser": "^1.19.0",
+        "express": "^4.17.1",
+        "nodemon": "^2.0.3",
+        "pug": "^2.0.4",
+        "scss": "^0.2.4"
+    },
+    "devDependencies": {},
+    "description": ""
+}
