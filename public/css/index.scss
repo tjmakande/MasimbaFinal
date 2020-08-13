@@ -122,7 +122,7 @@ body {
                     //position: relative;
                     top: 10%;
                     left: 5%;
-                    letter-spacing: 3px;
+                    letter-spacing: 5px;
                 }
                 &__button {
                     display: inline-block;
@@ -291,7 +291,7 @@ body {
             position: relative;
             display: flex;
             flex-direction: column;
-            height: 700px;
+            height: 750px;
             overflow: hidden;
             align-items: center;
             .header {
@@ -316,177 +316,137 @@ body {
                     margin: 20px 120px;
                 }
             }
-            .slideshow-container {
+            .MusicContent{
                 width: 1100px;
                 height: 520px;
                 display: flex;
                 flex-direction: row;
                 position: relative;
                 margin: auto;
-                .first {
-                    .AlbumContainer {
-                        .AlbumCover {
-                            background-image: url('../Images/4eva-cover.jpg');
-                            background-size: cover;
-                            background-position: center;
-                            .stream_details_first {
-                                display: none;
-                                flex-direction: column;
-                                height: 100%;
-                                width: 100%;
-                                border-radius: 20px 20px;
-                                background-color: rgba(0, 0, 0, 0.747);
-                                h2 {
-                                    color: white;
-                                    text-align: center;
-                                }
-                                .stream_service {
-                                    height: 50px;
-                                    display: flex;
-                                    justify-content: space-evenly;
-                                    align-items: center;
-                                    a {
-                                        width: 15px;
-                                        padding: 5px;
-                                        svg {
-                                            position: relative;
-                                            width: 30px;
-                                             :hover {
-                                                transition: .5s;
-                                                fill: rgb(175, 175, 175);
-                                                cursor: pointer;
-                                            }
-                                        }
-                                    }
-                                }
-                                .widget {
-                                    display: flex;
-                                    justify-content: center;
-                                    iframe {
-                                        margin: 12% 0;
-                                    }
-                                }
-                            }
-                        }
+    
+                .prev,.next {
+                    cursor: pointer;
+                    position: absolute;
+                    top: 30%;
+                    width: auto;
+                    color: black;
+                    font-weight: bold;
+                    font-size: 24px;
+                    transition: 0.6s ease;
+                    border-radius: 0 3px 3px 0;
+    
+                    &:hover {
+                        background-color: rgba(169, 168, 168, 0.8);
                     }
                 }
-                .second {
-                    .AlbumCover {
-                        background-image: url('../Images/4now.jpg');
-                        background-size: cover;
-                        background-position: center;
-                        .stream_details_second {
-                            display: none;
+                .next {
+                    right: 0;
+                    border-radius: 3px 0 0 3px;
+                }
+    
+                .Music__Slide{
+                    width:100%;
+                    height:100%;
+                    display:flex;
+                    flex-direction: column;
+    
+                    &__Details{
+                        display:flex;
+                        flex-direction: row;
+                        width:100%;
+                        height:70%;
+                        margin:auto;
+    
+                        &__AlbumCover{
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            width:50%;
+                            height:100%;
+    
+                            img{
+                                width:400px;
+                                height:370px;
+                                border-radius: 10%;
+                                box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+                                        0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+                                        0 12.5px 10px rgba(0, 0, 0, 0.06),
+                                        0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+                                        0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+                                        0 100px 80px rgba(0, 0, 0, 0.12)
+                            }
+                        }
+                        &__SongDetails{
+                            display: flex;
                             flex-direction: column;
-                            height: 100%;
-                            width: 100%;
-                            border-radius: 20px 20px;
-                            background-color: rgba(0, 0, 0, 0.747);
-                            h2 {
-                                color: white;
-                                text-align: center;
+                            justify-content: center;
+                            align-items: center;
+                            width:50%;
+                            height:100%;
+    
+                            &__Title{
+                                font-size: 40px;
+                                color: rgb(97, 97, 97);
+                                font-family: Alegreya;
+                                font-weight: 20;
+                                margin:0;
                             }
-                            .stream_service {
-                                height: 50px;
-                                display: flex;
-                                justify-content: space-evenly;
-                                align-items: center;
-                                a {
-                                    width: 15px;
-                                    padding: 5px;
-                                    svg {
-                                        position: relative;
-                                        width: 30px;
-                                         :hover {
-                                            transition: .5s;
-                                            fill: rgb(175, 175, 175);
-                                            cursor: pointer;
-                                        }
-                                    }
-                                }
+                            &__Type{
+                                color: rgba(144, 144, 144);
+                                font-family: Alegreya;
+                                font-weight: 20;
+                                font-size: 40px;
+                                margin:0;
                             }
-                            .widget {
-                                display: flex;
-                                justify-content: center;
-                                iframe {
-                                    margin: 12% 0;
-                                }
-                            }
+    
                         }
                     }
-                }
-                .third {
-                    .AlbumCover {
-                        background-image: url('../Images/Street\ Light.jpg');
-                        background-size: cover;
-                        background-position: center;
-                        .stream_details_third {
-                            display: none;
-                            flex-direction: column;
-                            height: 100%;
-                            width: 100%;
-                            border-radius: 20px 20px;
-                            background-color: rgba(0, 0, 0, 0.747);
-                            h2 {
-                                color: white;
-                                text-align: center;
-                            }
-                            .stream_service {
-                                height: 50px;
-                                display: flex;
-                                justify-content: space-evenly;
-                                align-items: center;
-                                a {
-                                    width: 15px;
-                                    padding: 5px;
-                                    svg {
-                                        position: relative;
-                                        width: 30px;
-                                         :hover {
-                                            transition: .5s;
-                                            fill: rgb(175, 175, 175);
-                                            cursor: pointer;
-                                        }
-                                    }
-                                }
-                            }
-                            .widget {
-                                display: flex;
-                                justify-content: center;
-                                iframe {
-                                    margin: 12% 0;
-                                }
-                            }
-                        }
-                    }
-                }
-                #mySlides {
-                    display: flex;
-                    flex-direction: row;
-                    width: 100%;
-                    height: inherit;
-                    .AlbumContainer {
-                        width: 50%;
+                    &__Buttons{
+                        width:100%;
+                        height:30%;
                         display: flex;
                         flex-direction: column;
-                        text-align: left;
-                        margin: 0 auto;
-                        //display: inline;
-                        .AlbumCover {
-                            width: 400px;
-                            margin: 0px auto 10px auto;
-                            height: 370px;
-                            border-radius: 20px 20px;
-                            //text-align: center;
+                        padding:30px 0;
+    
+                        &__Stream{
+                            text-align: center;
+                            height:30px;
+                            width:250px;
+                            margin: 15px 12.5%;
+                            padding:5px auto;
+                            background-color: rgba(0, 0, 0, 0);
+                            color: black;
+                            font-size: 20px;
+                            font-family: alegreya;
+                            letter-spacing: 1px;
+                            text-transform: uppercase;
+                            border: 3px solid black;
+                            border-radius: 50px;
+                            cursor: pointer;
+    
+                            &:hover {
+                                background-color: black;
+                                color: white;
+                            }
+                            &:active {
+                                transform: translateY(1px);
+                                border: 3px solid black;
+                                border-radius: 50px;
+                            }
+                            &:focus {
+                                border: 3px solid black;
+                                border-radius: 50px;
+                                outline: none;
+                            }
                         }
-                        #MoreMusic {
+                        &__More{
                             width: 130px;
                             font-size: 20px;
-                            color: rgba(144, 144, 144);
+    
+                            color: rgb(36, 36, 36);
                             text-decoration: none;
                             position: relative;
-                            display: inline-block;
-                            margin: 0 auto;
+                            margin: 0 13%;
                             &:hover {
                                 cursor: pointer;
                                 color: rgba(0, 0, 0, 1);
@@ -511,90 +471,6 @@ body {
                                 left: 0;
                             }
                         }
-                    }
-                }
-                .SongInfo {
-                    width: 60%;
-                    display: flex;
-                    flex-direction: column;
-                    text-align: center;
-                    margin: 0;
-                    font-family: Alegreya;
-                    &__Details {
-                        width: 40%;
-                        height: 400px;
-                        margin: 0 auto;
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        p {
-                            font-size: 40px;
-                            color: rgb(97, 97, 97);
-                            font-family: Alegreya;
-                            font-weight: 20;
-                            margin-top: 0;
-                        }
-                        .AlbumName {
-                            color: rgba(144, 144, 144);
-                            font-family: Alegreya;
-                            font-weight: 20;
-                        }
-                    }
-                }
-                .prev,
-                .next {
-                    cursor: pointer;
-                    position: absolute;
-                    top: 25%;
-                    width: auto;
-                    color: black;
-                    font-weight: bold;
-                    font-size: 24px;
-                    transition: 0.6s ease;
-                    border-radius: 0 3px 3px 0;
-                    &:hover {
-                        background-color: rgba(169, 168, 168, 0.8);
-                    }
-                }
-                .next {
-                    right: 0;
-                    border-radius: 3px 0 0 3px;
-                }
-                .fade {
-                    -webkit-animation-name: fade;
-                    -webkit-animation-duration: 1.5s;
-                    animation-name: fade;
-                    animation-duration: 1.5s;
-                }
-                .button_sub-1,
-                .button_sub-2,
-                .button_sub-3 {
-                    display: inline-block;
-                    position: relative;
-                    margin: 15px 28%;
-                    padding: 5px 70px;
-                    background-color: rgba(0, 0, 0, 0);
-                    color: black;
-                    font-size: 20px;
-                    font-family: alegreya;
-                    letter-spacing: 1px;
-                    text-transform: uppercase;
-                    border: 3px solid black;
-                    border-radius: 50px;
-                    cursor: pointer;
-                    &:hover {
-                        background-color: black;
-                        color: white;
-                    }
-                    &:active {
-                        transform: translateY(1px);
-                        border: 3px solid black;
-                        border-radius: 50px;
-                    }
-                    &:focus {
-                        border: 3px solid black;
-                        border-radius: 50px;
-                        outline: none;
                     }
                 }
             }
@@ -757,6 +633,8 @@ body {
                 }
             }
         }
+
+       
         footer {
             height: 250px;
             width:100%;
@@ -825,29 +703,19 @@ body {
                 }
             }
             .Music {
-                .slideshow-container {
+                .MusicContent{
                     width: 900px;
-                    #mySlides {
-                        .AlbumContainer {
-                            .AlbumCover {
-                                height: 320px;
-                                width: 300px;
-                            }
-                            .listen {
-                                display: flex;
-                                justify-content: center;
-                                margin: 5% auto;
-                                .button_sub-1,
-                                .button_sub-2,
-                                .button_sub-3 {
-                                    margin: 5% auto;
+                    .Music__Slide {
+                        &__Details{
+                            &__AlbumCover{
+                                img{
+                                    height: 320px;
+                                    width: 300px;
                                 }
                             }
-                        }
-                        .SongInfo {
-                            .SongInfo__Details {
-                                p {
-                                    font-size: 30px;
+                            &__SongDetails {
+                                &__Title , &__Type{
+                                    font-size:30px;
                                 }
                             }
                         }
@@ -870,29 +738,19 @@ body {
                 }
             }
             .Music {
-                .slideshow-container {
+                .MusicContent{
                     width: 800px;
-                    #mySlides {
-                        .AlbumContainer {
-                            .AlbumCover {
-                                height: 320px;
-                                width: 300px;
-                            }
-                            .listen {
-                                display: flex;
-                                justify-content: center;
-                                margin: 5% auto;
-                                .button_sub-1,
-                                .button_sub-2,
-                                .button_sub-3 {
-                                    margin: 5% auto;
+                    .Music__Slide {
+                        &__Details{
+                            &__AlbumCover{
+                                img{
+                                    height: 320px;
+                                    width: 300px;
                                 }
                             }
-                        }
-                        .SongInfo {
-                            .SongInfo__Details {
-                                p {
-                                    font-size: 30px;
+                            &__SongDetails {
+                                &__Title , &__Type{
+                                    font-size:30px;
                                 }
                             }
                         }
@@ -950,28 +808,23 @@ body {
                         margin: 0px auto;
                     }
                 }
-                .slideshow-container {
+                .MusicContent{
                     width: 550px;
-                    #mySlides {
-                        flex-direction: column;
-                        .AlbumContainer {
-                            .AlbumCover {
-                                height: 320px;
-                                width: 300px;
-                            }
-                            .listen {
-                                display: flex;
-                                justify-content: center;
-                                margin: 5% auto;
-                                .button_sub-1,
-                                .button_sub-2,
-                                .button_sub-3 {
-                                    margin: 5% auto;
+                    .Music__Slide {
+                        &__Details{
+                            &__AlbumCover{
+                                width:100%;
+                                img{
+                                    height: 320px;
+                                    width: 300px;
                                 }
                             }
+                            &__SongDetails {
+                                display:none;
+                            }
                         }
-                        .SongInfo {
-                            display: none;
+                        &__Buttons{
+                            align-items: center;
                         }
                     }
                 }
@@ -986,6 +839,7 @@ body {
             .Landing {
                 background-position:right;
                 .Landing-details{
+                    display:none;
                     position: relative;
                     top:0;
                     left:0;
@@ -1033,6 +887,29 @@ body {
                         margin: 0px auto;
                     }
                 }
+
+                .MusicContent{
+                    width:90%;
+                    height:480px;
+                    .Music__Slide {
+                        &__Details{
+                            &__AlbumCover{
+                                width:100%;
+                                img{
+                                    height: 270px;
+                                    width: 70%;
+                                }
+                            }
+                            &__SongDetails {
+                                display:none;
+                            }
+                        }
+                        &__Buttons{
+                            align-items: center;
+                        }
+                    }
+                }
+                
                 .slideshow-container {
                     width: 90%;
                     height: 480px;
@@ -1045,16 +922,6 @@ body {
                             .AlbumCover {
                                 height: 320px;
                                 width: 100%;
-                            }
-                            .listen {
-                                display: flex;
-                                justify-content: center;
-                                margin: 5% auto;
-                                .button_sub-1,
-                                .button_sub-2,
-                                .button_sub-3 {
-                                    margin: 0;
-                                }
                             }
                         }
                         .SongInfo {
