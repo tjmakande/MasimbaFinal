@@ -30,6 +30,7 @@ body {
             margin: auto;
         }
     }
+  
     .Menu {
         position: fixed;
         right: 0;
@@ -37,10 +38,11 @@ body {
         height: 100vh;
         background-color: black;
         z-index: 2;
-        // transform:translateX(50px)
         display: flex;
         justify-content: center;
         flex-direction: column;
+        transition: width 1s;
+
         ul {
             padding: 0;
             margin: 7px 0px;
@@ -116,7 +118,7 @@ body {
                 &__heading {
                     display: block;
                     font-size: 140px;
-                    font-family: 'Orbitron', sans-serif;
+                    font-family: 'Open Sans', sans-serif;
                     color: white;
                     text-shadow: #000000 0px 0px 10px;
                     //position: relative;
