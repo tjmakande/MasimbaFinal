@@ -1,16 +1,14 @@
-$(document).ready(function(){ 
-    $('.icon').click(function(){
-        if(!$('.Menu').hasClass('open')){
-            $('.Menu').addClass('open');
-            // $('.Primary_Content').animate({'margin-right':250}, 1000)
-            $('.Menu').animate({'width':250}, 1000);
-            $('.BB').css({'width':'100vw'});
+const Menu = document.querySelector('.Menu');
+const BB = document.querySelector('.BB');
 
-        }else{
-            $('.Menu').removeClass('open')
-            // $('.Primary_Content').animate({'margin-right':0}, 1000)
-            $('.Menu').animate({'width':0}, 1000);
-            $('.BB').css({'width':'0'}, 1000)
-        }
-    });
-});
+document.querySelector('.icon').addEventListener('click', function(){
+    if(!Menu.classList.contains('open')){
+        Menu.classList.add('open');
+        Menu.style.width = '250px';
+        BB.style.width = '100vw'
+    }else{
+        Menu.classList.remove('open');
+        Menu.style.width = '0px';
+        BB.style.width = '0px'
+    }
+})
